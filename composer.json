@@ -1,0 +1,15 @@
+{
+    "name": "zcwang/helloworld",
+    "authors": [
+        {
+            "name": "zcwang",
+            "email": "zcwang1224@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zcwang\\HelloWorld\\": "src/"
+        }
+    },    
+    "require": {}
+}
