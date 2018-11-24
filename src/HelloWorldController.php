@@ -10,7 +10,7 @@ class HelloWorldController extends Controller
     //
     public function index()
     {
-        $message = 'Hello World!!!';
+        $message = 'Hello World!!!Hello World!!!';
         return view('HelloWorld::welcome', compact('message'));    	
     }
 }
