@@ -15,12 +15,10 @@ class HelloWorldServiceProvider extends ServiceProvider
     {
         $this->app->make(HelloWorldController::class);
 
-        include(__DIR__ . '/web.php');
-        
+        // include(__DIR__ . '/web.php');
+        $this->loadRoutesFrom(__DIR__.'/web.php');
         $this->loadViewsFrom(__DIR__ . '/views', 'HelloWorld');
-        $this->publishes([
-                            __DIR__.'/config/hello.php' => config_path('hello.php')
-                        ]);
+        // $this->publishes([__DIR__.'/config/hello.php' => config_path('hello.php')]);
     }
 
     /**
@@ -31,5 +29,8 @@ class HelloWorldServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->mergeConfigFrom(
+            __DIR__.'/config/hello.php', 'queue'
+        );
     }
 }
