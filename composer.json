@@ -6,6 +6,13 @@
             "email": "zcwang1224@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zcwang\\HelloWorld\\HelloWorldServiceProvider"
+            ]
+        }
+    },    
     "autoload": {
         "psr-4": {
             "Zcwang\\HelloWorld\\": "src/"
