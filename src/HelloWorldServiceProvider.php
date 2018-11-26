@@ -19,6 +19,7 @@ class HelloWorldServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/web.php');
         $this->loadViewsFrom(__DIR__ . '/views', 'HelloWorld');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
+        $this->loadTranslationsFrom(__DIR__.'/lang/');
         // $this->publishes([__DIR__.'/config/hello.php' => config_path('hello.php')]);
     }
 
