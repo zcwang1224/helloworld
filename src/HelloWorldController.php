@@ -11,6 +11,7 @@ class HelloWorldController extends Controller
     public function index()
     {
         $message = 'Hello haha';
+        // dd(trans('helloname::hello.name'));
         return view('HelloWorld::welcome', compact('message'));    	
     }
 }
